@@ -27,6 +27,14 @@ class PDFPluginModel(CMSPlugin):
         blank=True, null=True,
     )
 
+    def __unicode__(self):
+        if self.file.name:
+            return self.file.name
+        elif self.file.original_filename:
+            self.file.original_filename
+        else:
+            return self.file.path
+
     def save(self, *args, **kwargs):
         """Customized to generate an image from the pdf file."""
         # TODO create image here

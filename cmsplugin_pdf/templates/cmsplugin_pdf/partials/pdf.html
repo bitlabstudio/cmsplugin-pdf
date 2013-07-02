@@ -1,0 +1,5 @@
+{% load i18n thumbnail placeholder_tags %}
+<h1>{{ pdf_plugin }}</h1>
+<a href="{{ pdf_plugin.file.url }}">
+    <img scr="{{ pdf_plugin.image.url }}" alt="PDF Cover" />
+</a>
