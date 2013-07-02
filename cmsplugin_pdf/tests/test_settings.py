@@ -71,6 +71,8 @@ EXTERNAL_APPS = [
     'cms.plugins.text',
     'filer',
     'easy_thumbnails',
+    'wand',
+    'menus',
 ]
 
 # the following apps are added separatly, because they cause problems with the
@@ -91,13 +93,14 @@ LANGUAGES = [
     ('en', 'English'),
 ]
 
+LANGUAGE_CODE = 'en'
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'cms.middleware.multilingual.MultilingualURLMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',

@@ -29,6 +29,7 @@ setup(
         'django-cms',
         'django-filer',
         'Pillow',
+        'Wand',
     ],
     tests_require=[
         'fabric',
