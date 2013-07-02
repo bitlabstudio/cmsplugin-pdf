@@ -43,6 +43,7 @@ COVERAGE_REPORT_HTML_OUTPUT_DIR = os.path.join(
 COVERAGE_MODULE_EXCLUDES = [
     'tests$', 'settings$', 'urls$', 'locale$',
     'migrations', 'fixtures', 'admin$', 'django_extensions',
+    'cms$', '__init__',
 ]
 
 EXTERNAL_APPS = [
@@ -65,7 +66,6 @@ EXTERNAL_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'django_nose',
-    'cms',
     'mptt',
     'sekizai',
     'cms.plugins.text',
@@ -73,11 +73,17 @@ EXTERNAL_APPS = [
     'easy_thumbnails',
 ]
 
+# the following apps are added separatly, because they cause problems with the
+# regex lookup for the coverage module excludes.
+NON_COVERAGE_APPS = [
+    'cms',
+]
+
 INTERNAL_APPS = [
     'cmsplugin_pdf',
 ]
 
-INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS
+INSTALLED_APPS = EXTERNAL_APPS + NON_COVERAGE_APPS + INTERNAL_APPS
 
 COVERAGE_MODULE_EXCLUDES += EXTERNAL_APPS
 
@@ -121,3 +127,5 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters',
 )
+
+SECRET_KEY = 'NOT A REAL SECRET KEY'
