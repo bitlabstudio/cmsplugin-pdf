@@ -1,5 +1,8 @@
 === ongoing ===
 
+
+== 0.2 ===
+
 - Added basic plugin models and the PDFPlugin cms plugin
 
 === 0.1 ===
