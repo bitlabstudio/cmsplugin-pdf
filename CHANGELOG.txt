@@ -1,5 +1,7 @@
 === ongoing ===
 
+- Added basic plugin models and the PDFPlugin cms plugin
+
 === 0.1 ===
 
 - Initial commit

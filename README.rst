@@ -33,7 +33,12 @@ Add ``cmsplugin_pdf`` to your ``INSTALLED_APPS``::
 Usage
 -----
 
-TODO: Describe usage
+Create a CMS page with a placeholder, upload a pdf file using filer and simply
+insert the plugin ``PDF File``.
+
+
+Note that currently the thumbnail size is adjusted only in the template at
+``cmsplugin_pdf/partials/pdf.html``.
 
 
 Contribute
