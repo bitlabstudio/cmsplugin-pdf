@@ -1,5 +1,6 @@
 === ongoing ===
 
+- Fixed bugs with the file saving and thumbnail generation 
 
 == 0.2 ===
 
