@@ -45,7 +45,7 @@ class PDFPluginModel(CMSPlugin):
     def save(self, *args, **kwargs):
         """Customized to generate an image from the pdf file."""
         # open image from pdf
-        img = Image(filename=self.file.path + '[1]')
+        img = Image(filename=self.file.path + '[0]')
 
         # make new filename
         filename = os.path.basename(self.file.path).split('.')[:-1]
