@@ -2,7 +2,7 @@
 import glob
 import os
 
-from django.conf import settings
+from django.conf import settings as django_settings
 from django.core.files import File
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -10,6 +10,8 @@ from django.utils.translation import ugettext_lazy as _
 from cms.models import CMSPlugin
 from filer.fields.file import FilerFileField
 from wand.image import Image
+
+from . import settings
 
 
 UPLOAD_TO_DIR = 'pdf_images'
@@ -19,10 +21,19 @@ class PDFPluginModel(CMSPlugin):
     """
     Plugin model to link to a specific pdf file instance and its image.
 
+    :display_type: String representing a display type. This is helpful if
+      you want to render the plugin differently in different parts of your
+      site.
     :file: FK to the FilerFile. Should be the PDF that is to be added.
     :image: The generated cover image from the pdf.
 
     """
+    display_type = models.CharField(
+        max_length=256,
+        choices=settings.DISPLAY_TYPE_CHOICES,
+        verbose_name=_('Display type'),
+    )
+
     file = FilerFileField(
         verbose_name=_('File'),
     )
@@ -55,7 +66,7 @@ class PDFPluginModel(CMSPlugin):
         # TODO: Would be better to compute this path from the upload_to
         # setting which is already set on the model field
         image_dir = os.path.join(
-            settings.MEDIA_ROOT, UPLOAD_TO_DIR)
+            django_settings.MEDIA_ROOT, UPLOAD_TO_DIR)
         if not os.path.exists(image_dir):
             os.makedirs(image_dir)
 

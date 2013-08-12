@@ -41,6 +41,27 @@ Note that currently the thumbnail size is adjusted only in the template at
 ``cmsplugin_pdf/partials/pdf.html``.
 
 
+Settings
+--------
+
+CMSPLUGIN_PDF_DISPLAY_TYPE_CHOICES
+++++++++++++++++++++++++++++++++++
+
+Default::
+
+    [
+        ('standard', _('standard')),
+        ('small', _('small')),
+        ('highlight', _('highlight')),
+    ]
+
+When using the ``PDF File`` plugin in your django-cms placeholders you will
+notice that you have three choices for the ``Display type``. This field
+can be helpful when you want to render a file differently in different parts
+of your site. If you need even more display types, just set this setting to
+a different list of tuples.
+
+
 Contribute
 ----------
 

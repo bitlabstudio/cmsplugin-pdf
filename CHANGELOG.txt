@@ -1,5 +1,8 @@
 === ongoing ===
 
+- added display_type field
+- added CMSPLUGIN_PDF_DISPLAY_TYPE_CHOICES setting
+
 === 0.3.1 ===
 
 - Fix: saving first page instead of second
