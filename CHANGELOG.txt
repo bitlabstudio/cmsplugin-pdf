@@ -1,5 +1,7 @@
 === ongoing ===
 
+=== 0.4 ===
+
 - added display_type field
 - added CMSPLUGIN_PDF_DISPLAY_TYPE_CHOICES setting
 
