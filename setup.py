@@ -24,7 +24,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Django>=1.4.5',
+        'Django>=1.4.2',
         'South',
         'django-cms',
         'django-filer',
