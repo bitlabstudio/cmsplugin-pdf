@@ -1,5 +1,7 @@
 === ongoing ===
 
+=== 0.5 ===
+
 - added get_page_count template filter
 
 === 0.4 ===
