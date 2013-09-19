@@ -41,6 +41,19 @@ Note that currently the thumbnail size is adjusted only in the template at
 ``cmsplugin_pdf/partials/pdf.html``.
 
 
+Templatetags
+------------
+
+get_page_count
+++++++++++++++
+
+Use this template filter if you would like to display the page count for a pdf
+file::
+
+    {% load cmsplugin_pdf_tags %}
+    Pages: {{ pdf_plugin.file.path|get_page_count }}
+
+
 Settings
 --------
 

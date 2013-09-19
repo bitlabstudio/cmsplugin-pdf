@@ -1,5 +1,7 @@
 === ongoing ===
 
+- added get_page_count template filter
+
 === 0.4 ===
 
 - added display_type field
