@@ -1,4 +1,6 @@
 === ongoing ===
+ 
+ - Added missing dependancy to setup.py
 
 === 0.5 ===
 

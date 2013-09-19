@@ -30,6 +30,7 @@ setup(
         'django-filer',
         'Pillow',
         'Wand',
+        'pyPdf',
     ],
     tests_require=[
         'fabric',
