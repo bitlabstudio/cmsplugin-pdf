@@ -36,6 +36,7 @@ class PDFPluginModel(CMSPlugin):
 
     file = FilerFileField(
         verbose_name=_('File'),
+        on_delete=models.CASCADE,
     )
 
     image = models.ImageField(
